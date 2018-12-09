@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>cavity</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <header>
@@ -20,10 +22,20 @@
       <form class="" action="index.html" method="post">
         <input type="text" name="" value="">
       </form>
+
+      <div id="app">
+        <p>{{ message }}</p>
+        <ol>
+            <todo-item></todo-item>
+            <todo-item></todo-item>
+        </ol>
+      </div>
+      
     </main>
     <footer>
       <p class="auther">this site created by yukikoma at 2018</p>
     </footer>
-    <script type="text/javascript" rel="cavity.js"></script>
+
+  <script type="text/javascript" src="cavity.js"></script>
   </body>
 </html>
