@@ -19,15 +19,51 @@
       </nav>
     </header>
     <main>
-      <form class="" action="index.html" method="post">
-        <input type="text" name="" value="">
-      </form>
 
-      <div id="app">
-          <p>{{ message }}</p>
-          <button v-on:click="reverseMessage">Reverse Message</button>
+      <!-- <form class="" action="index.html" method="post">
+        <input type="text" name="" value="">
+      </form> -->
+      <h2>方形空洞共振器</h2>
+      <div id="rectangularCavityResonator">
+          <p>x_Length: {{ x_Length }} [mm]</p>
+          <input v-model="x_Length">
+          <p>y_Length: {{ y_Length }} [mm]</p>
+          <input v-model="y_Length">
+          <p>z_Length: {{ z_Length }} [mm]</p>
+          <input v-model="z_Length">
+          <br>
+          <button v-on:click="calcTEmode">Calc TE Mode</button>
+
+        <ol id="TEmodeResult">
+          <!-- <modeResult-list
+              v-for="modeResult in modeResultList">
+          </modeResult-list> -->
+          <li v-for="modeResult in modeResultList">
+            <!-- https://jp.vuejs.org/v2/guide/list.html -->
+            <!-- {{modeResult.f}} -->
+            TE
+            <span class="small">{{modeResult.m}}
+            {{modeResult.n}}
+            {{modeResult.p}}</span>
+            : {{ modeResult.f }} [GHz]
+          </li>
+        </ol>
       </div>
-      
+
+<!-- <div id="modeResult-list">
+             <h1>modeResult-list</h1>
+             <input type="text" v-model="newTask">
+             <input type="button" value="追加" v-on:click="addTask">
+             <div class="list">
+                 <ul>
+                     <li v-for="item in list" :key="item.id">
+                         {{ item.value }}　
+                         <input type="button" value="達成">
+                         <input type="button" value="削除">
+                     </li>
+                 </ul>
+             </div>
+         </div> -->
     </main>
     <footer>
       <p class="auther">this site created by yukikoma at 2018</p>
