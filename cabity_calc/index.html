@@ -24,11 +24,8 @@
       </form>
 
       <div id="app">
-        <p>{{ message }}</p>
-        <ol>
-            <todo-item></todo-item>
-            <todo-item></todo-item>
-        </ol>
+          <p>{{ message }}</p>
+          <button v-on:click="reverseMessage">Reverse Message</button>
       </div>
       
     </main>
