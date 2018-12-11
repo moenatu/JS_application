@@ -1,4 +1,4 @@
-
+//円筒形も作る。
 var rectangularCavityResonator = new Vue({
   el: '#rectangularCavityResonator',
   data:{
@@ -15,6 +15,7 @@ var rectangularCavityResonator = new Vue({
         var m = 1,n = 0,p = 1,lambda = 0,f = 0;
         var TEmode = {m:m,n:n,p:p,lambda:lambda,f:f};
         var a = 2 * this.x_Length, b = 2 * this.y_Length, l = 2 * this.z_Length;
+        //長さのルールをどう決めるか。
         var c = 299792458; //[m/s]
         this.modeResultList = [];
         console.log(TEmode);
